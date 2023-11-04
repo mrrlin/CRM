@@ -17,12 +17,12 @@
 }
 
 {
-  furnitureName = prompt('Введите название товара: ');
-  quantity = parseInt(prompt('Введите количество товара: '));
-  category = prompt('Введите категорию товара: ');
-  price = parseInt(prompt('Введите цену товара: '));
+  const furnitureName = prompt('Введите название товара: ');
+  const quantity = parseInt(prompt('Введите количество товара: '));
+  const category = prompt('Введите категорию товара: ');
+  const price = parseInt(prompt('Введите цену товара: '));
   
-  sum = userGoodPrice * userGoodQuantity;
+  const sum = userGoodPrice * userGoodQuantity;
   
   console.log(`Товар: ${furnitureName},
   Количество: ${quantity} шт.,
