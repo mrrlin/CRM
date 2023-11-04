@@ -22,7 +22,7 @@
   const category = prompt('Введите категорию товара: ');
   const price = parseInt(prompt('Введите цену товара: '));
   
-  const sum = userGoodPrice * userGoodQuantity;
+  const sum = quantity * price;
   
   console.log(`Товар: ${furnitureName},
   Количество: ${quantity} шт.,
