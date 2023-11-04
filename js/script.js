@@ -1,30 +1,34 @@
 'use strict';
 
-const closet = 'Valery';
-const quantity = 3;
-const category = 'Furniture';
-const price = 10000;
+{
+  const furnitureName = 'Valery';
+  const quantity = 3;
+  const category = 'Closet';
+  const price = 10000;
+  
+  const sum = price * quantity;
+  
+  console.log(`Товар: ${furnitureName},
+  Количество: ${quantity},
+  Категория: ${category},
+  Цена: ${price}`);
+  
+  console.log(`Товар: ${furnitureName}, общая сумма: ${sum}`);
+}
 
-const sum = price * quantity;
-
-console.log(`Товар: ${closet},
-Количество: ${quantity},
-Категория: ${category},
-Цена: ${price}`);
-
-console.log(`Товар: ${closet}, общая сумма: ${sum}`);
-
-const userGoodName = prompt('Введите название товара: ');
-const userGoodQuantity = parseInt(prompt('Введите количество товара: '));
-const userGoodCategory = prompt('Введите категорию товара: ');
-const userGoodPrice = parseInt(prompt('Введите цену товара: '));
-
-const userGoodSumPrice = userGoodPrice * userGoodQuantity;
-
-console.log(`Товар: ${userGoodName},
-Количество: ${userGoodQuantity} шт.,
-Категория: ${userGoodSumPrice},
-Цена: ${userGoodPrice}`);
-
-console.log(`Товар: ${userGoodName} в количестве: ${userGoodQuantity}
-шт. и общей стоимостью: ${userGoodSumPrice} деревянных`);
+{
+  furnitureName = prompt('Введите название товара: ');
+  quantity = parseInt(prompt('Введите количество товара: '));
+  category = prompt('Введите категорию товара: ');
+  price = parseInt(prompt('Введите цену товара: '));
+  
+  sum = userGoodPrice * userGoodQuantity;
+  
+  console.log(`Товар: ${furnitureName},
+  Количество: ${quantity} шт.,
+  Категория: ${category},
+  Цена: ${price}`);
+  
+  console.log(`Товар: ${furnitureName} в количестве: ${quantity}
+  шт. и общей стоимостью: ${price} деревянных`);
+}
