@@ -1,8 +1,8 @@
 'use strict';
 
-const closet = 'Valery';
+const furniture = 'Valery';
 const quantity = 3;
-const category = 'Furniture';
+const category = 'Closet';
 const price = 10000;
 
 const sum = price * quantity;
