@@ -1,15 +1,15 @@
 'use strict';
 
-const furnitureName = 'Valery';
-const quantity = 3;
-const category = 'Closet';
-const price = 10000;
+const productName = 'Valery';
+const productQuantity = 3;
+const productCategory = 'Closet';
+const productPrice = 10000;
 
-const sum = price * quantity;
+const productTotalPrice = productPrice * productQuantity;
 
-console.log(`Товар: ${furnitureName},
-количество: ${quantity},
-категория: ${category},
-цена: ${price}`);
+console.log(`Товар: ${productName},
+количество: ${productQuantity},
+категория: ${productCategory},
+цена: ${productPrice}`);
 
-console.log(`Товар: ${furnitureName}, общая сумма: ${sum}`);
+console.log(`Товар: ${productName}, общая сумма: ${productTotalPrice}`);
