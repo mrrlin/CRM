@@ -7,7 +7,7 @@ const productPrice = +prompt('Введите цену товара: ');
 
 let productTotalPrice = 0;
 
-if (!parseInt(productQuantity) || !parseInt(productPrice)) {
+if (isNaN(productQuantity) || isNaN(productPrice)) {
   console.log('Вы ввели некорректные данные');
 } else {
   productTotalPrice = productQuantity * productPrice;

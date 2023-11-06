@@ -15,7 +15,7 @@ const pointsInformatics = +prompt('Введите кол-во баллов по 
 
 let pointsSum = 0;
 
-if (!parseInt(pointsMath) || !parseInt(pointsRussianLaguage) || !parseInt(pointsInformatics)) {
+if (isNaN(pointsMath) || isNaN(pointsRussianLaguage) || isNaN(pointsInformatics)) {
   console.log('Вы ввели некорректные данные');
 } else {
   pointsSum = pointsMath + pointsRussianLaguage + pointsInformatics;
@@ -29,11 +29,15 @@ if (!parseInt(pointsMath) || !parseInt(pointsRussianLaguage) || !parseInt(points
 }
 
 //ATM
-minimumBanknoteDenomination = 100;
+const minimumBanknoteDenomination = 100;
 const moneySum = +prompt('Введите сумму для снятия');
 
-if (moneySum % minimumBanknoteDenomination === 0) {
-  console.log('Заберите ваши деньги');
+if (isNaN(moneySum)) {
+  console.log('Вы ввели некорректные данные');
 } else {
-  console.log('Минимальный номинал купюр, который может выдавать банкомат - 100р.');
+  if (!(moneySum % minimumBanknoteDenomination)) {
+    console.log('Заберите ваши деньги');
+  } else {
+    console.log('Минимальный номинал купюр, который может выдавать банкомат - 100р.');
+  }
 }
