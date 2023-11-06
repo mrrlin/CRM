@@ -7,3 +7,23 @@ if (rain === 1) {
 } else {
   console.log('Дождя нет!');
 }
+
+//university test
+const pointsMath = +prompt('Введите кол-во баллов по математике');
+const pointsRussianLaguage = +prompt('Введите кол-во баллов по русскому языку');
+const pointsInformatics = +prompt('Введите кол-во баллов по информатике');
+
+let pointsSum = 0;
+
+if (!parseInt(pointsMath) || !parseInt(pointsRussianLaguage) || !parseInt(pointsInformatics)) {
+  console.log('Вы ввели некорректные данные');
+} else {
+  pointsSum = pointsMath + pointsRussianLaguage + pointsInformatics;
+  console.log(`Ваша сумма баллов: ${pointsSum}`);
+
+  if (pointsSum < 265) {
+    console.log(`Вы не прошли на бюджет.`);
+  } else {
+    console.log(`Поздравляю, вы поступили на бюджет!`);
+  }
+}
