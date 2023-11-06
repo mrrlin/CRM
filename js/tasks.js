@@ -27,3 +27,13 @@ if (!parseInt(pointsMath) || !parseInt(pointsRussianLaguage) || !parseInt(points
     console.log(`Поздравляю, вы поступили на бюджет!`);
   }
 }
+
+//ATM
+minimumBanknoteDenomination = 100;
+const moneySum = +prompt('Введите сумму для снятия');
+
+if (moneySum % minimumBanknoteDenomination === 0) {
+  console.log('Заберите ваши деньги');
+} else {
+  console.log('Минимальный номинал купюр, который может выдавать банкомат - 100р.');
+}
