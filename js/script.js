@@ -1,24 +1,24 @@
 'use strict';
 
-const furnitureName = prompt('Введите название товара: ');
-const quantity = +prompt('Введите количество товара: ');
-const category = prompt('Введите категорию товара: ');
-const price = +prompt('Введите цену товара: ');
+const productName = prompt('Введите название товара: ');
+const productQuantity = +prompt('Введите количество товара: ');
+const productCategory = prompt('Введите категорию товара: ');
+const productPrice = +prompt('Введите цену товара: ');
 
-let sum = 0;
+let productTotalPrice = 0;
 
-if (!parseInt(quantity) || !parseInt(price)) {
+if (!parseInt(productQuantity) || !parseInt(productPrice)) {
   console.log('Вы ввели некорректные данные');
 } else {
-  sum = quantity * price;
+  productTotalPrice = productQuantity * productPrice;
   
   console.log(`
-  Товар: ${furnitureName},
-  Количество: ${quantity} шт.,
-  Категория: ${category},
-  Цена: ${price}`);
+  Товар: ${productName},
+  Количество: ${productQuantity} шт.,
+  Категория: ${productCategory},
+  Цена: ${productPrice}`);
   
   console.log(`
-  Товар: ${furnitureName} в количестве: ${quantity}
-  шт. и общей стоимостью: ${sum} деревянных`);
+  Товар: ${productName} в количестве: ${productQuantity}
+  шт. и общей стоимостью: ${productTotalPrice} деревянных`);
 }
