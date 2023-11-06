@@ -1,34 +1,34 @@
 'use strict';
 
 {
-  const furnitureName = 'Valery';
-  const quantity = 3;
-  const category = 'Closet';
-  const price = 10000;
+  const productName = 'Valery';
+  const productQuantity = 3;
+  const productCategory = 'Closet';
+  const productPrice = 10000;
   
-  const sum = price * quantity;
+  const productTotalPrice = productPrice * productQuantity;
   
-  console.log(`Товар: ${furnitureName},
-  Количество: ${quantity},
-  Категория: ${category},
-  Цена: ${price}`);
+  console.log(`Товар: ${productName},
+  Количество: ${productQuantity},
+  Категория: ${productCategory},
+  Цена: ${productPrice}`);
   
-  console.log(`Товар: ${furnitureName}, общая сумма: ${sum}`);
+  console.log(`Товар: ${productName}, общая сумма: ${productTotalPrice}`);
 }
 
 {
-  const furnitureName = prompt('Введите название товара: ');
-  const quantity = parseInt(prompt('Введите количество товара: '));
-  const category = prompt('Введите категорию товара: ');
-  const price = parseInt(prompt('Введите цену товара: '));
+  const productName = prompt('Введите название товара: ');
+  const productQuantity = parseInt(prompt('Введите количество товара: '));
+  const productCategory = prompt('Введите категорию товара: ');
+  const productPrice = parseInt(prompt('Введите цену товара: '));
   
-  const sum = quantity * price;
+  const productTotalPrice = productQuantity * productPrice;
   
-  console.log(`Товар: ${furnitureName},
-  Количество: ${quantity} шт.,
-  Категория: ${category},
-  Цена: ${price}`);
+  console.log(`Товар: ${productName},
+  Количество: ${productQuantity} шт.,
+  Категория: ${productCategory},
+  Цена: ${productPrice}`);
   
-  console.log(`Товар: ${furnitureName} в количестве: ${quantity}
-  шт. и общей стоимостью: ${price} деревянных`);
+  console.log(`Товар: ${productName} в количестве: ${productQuantity}
+  шт. и общей стоимостью: ${productTotalPrice} деревянных`);
 }
