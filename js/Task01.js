@@ -8,7 +8,7 @@ const convertCurrency = (price) => {
   return currentPrice * 1.2 * 73;
 };
 
-const userPrice = parseInt(prompt("Введите стоимость покупки в евро"));
+const userPrice = +prompt("Введите стоимость покупки в евро");
 
 if (isNaN(userPrice)) {
   console.log('Вы ввели некорректные данные');
