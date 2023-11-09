@@ -5,9 +5,6 @@ const calculate = (totalAmount, goodsCount, promoCode) => {
   const currentGoodsCount = goodsCount;
   const currentPromocode = promoCode;
 
-  console.log(`First: ${currentTotalAmount}`);
-
-
   if (currentGoodsCount > 10) {
     currentTotalAmount -= currentTotalAmount * 0.03;
   }
