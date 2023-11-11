@@ -22,7 +22,7 @@ if (isNaN(income)) {
       tax += 15000 * 0.13 + difference * 0.2;
     }
   
-    if (income < 15000) {
+    if (income < 15000 && income > 0) {
       tax += income * 0.13;
     }
   
