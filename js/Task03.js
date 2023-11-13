@@ -1,16 +1,11 @@
 'use strict';
 
-const reverseString = (userString) => {
-  let currentUserString = userString;
-  let resultString = '';
+const addPrefix = (mas, prefix) => {
+  let currentMas = [...mas];
 
-  for (let i = 0; i < currentUserString.length; i++) {
-    resultString += currentUserString[(currentUserString.length - 1) - i];
-  }
-
-  return resultString;
+  return currentMas.map(item => `${prefix} ${item}`);
 }
 
-const userString = prompt('Введите строку');
+const names= ['Noah', 'Liam', 'Mason', 'Jacob', 'Robot', 'William', 'Ethan', 'Michael', 'Alexander'];
 
-console.log(`${userString} => ${reverseString(userString)}`);
+console.log(addPrefix(names, 'Mr'));
