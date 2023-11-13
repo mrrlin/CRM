@@ -1,13 +1,25 @@
 'use strict';
 
-const stringModify = (userString) => {
-  const currentUserString = userString;
+const isPrime = (userNumber) => {
+  const currentuserNumber = userNumber;
 
-  if (!currentUserString) return currentUserString;
-
-  return currentUserString[0].toUpperCase() + currentUserString.slice(1).toLowerCase();
+  if (currentuserNumber > 1) {
+    for (let i = 2; i < currentuserNumber; i++) {
+      if (currentuserNumber % i === 0) {
+        return "Составное число";
+      }
+    }
+    return "Простое число";
+  } else {
+    return "Число должно быть больше 1";
+  }
+  
 };
 
-const userString = prompt('Введите строку');
+const userNumber = prompt('Введите число');
 
-console.log(`Преобразованная строка: ${stringModify(userString)}`);
+if (isNaN(userNumber)) {
+  console.log('Вы ввели некорректные данные');
+} else {
+  console.log(isPrime(userNumber));
+}
