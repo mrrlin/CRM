@@ -1,25 +1,16 @@
 'use strict';
 
-const isPrime = (userNumber) => {
-  const currentuserNumber = userNumber;
+const getAverageValue = (mas) => {
+  const currentMas = mas;
+  let averageValue = 0;
 
-  if (currentuserNumber > 1) {
-    for (let i = 2; i < currentuserNumber; i++) {
-      if (currentuserNumber % i === 0) {
-        return "Составное число";
-      }
-    }
-    return "Простое число";
-  } else {
-    return "Число должно быть больше 1";
+  for (let i = 0; i < currentMas.length; i++) {
+    averageValue += currentMas[i];
   }
-  
+
+  return Math.floor(averageValue / currentMas.length);
 };
 
-const userNumber = prompt('Введите число');
+const allCashbox = [4500, 3210, 650, 1250, 7830, 990, 13900, 370];
 
-if (isNaN(userNumber)) {
-  console.log('Вы ввели некорректные данные');
-} else {
-  console.log(isPrime(userNumber));
-}
+console.log(getAverageValue(allCashbox));
