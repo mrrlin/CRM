@@ -17,4 +17,4 @@ const [totalCount, totalPrice] = allCashbox
 
 const averagePriceGoods = Math.round(totalPrice / totalCount);
 
-console.log(averagePriceGoods);
+console.log(`Средняя цена товара: ${averagePriceGoods}`);
