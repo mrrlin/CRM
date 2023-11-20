@@ -1,20 +1,32 @@
 'use strict';
 
-const allCashbox = [
-  [12, 4500], 
-  [7, 3210], 
-  [4, 650], 
-  [3, 1250], 
-  [9, 7830], 
-  [1, 990], 
-  [6, 13900], 
-  [1, 370]
-];
+const guessNumber = num => {
+  const guessNumber = Math.floor((Math.random() * 100) + 1);
 
-const [totalCount, totalPrice] = allCashbox
-  .reduce(([totalCount, totalPrice], [count, price]) =>
-    [totalCount + count, totalPrice + price]);
+  return guessNumber;
+};
 
-const averagePriceGoods = Math.round(totalPrice / totalCount);
+let userNumber = 0;
 
-console.log(`Средняя цена товара: ${averagePriceGoods}`);
+const num = guessNumber();
+
+while (userNumber !== null && +userNumber !== num) {
+  userNumber = prompt('Enter a number from 1 to 100');
+
+  switch(true) {
+    case (userNumber === null):
+      alert('The game is finished');
+      break;
+    case isNaN(userNumber):
+      alert('Enter a number!');
+      break;
+    case userNumber < num:
+      alert('Bigger!');
+      break;
+    case userNumber > num:
+      alert('Less!');
+      break;
+    case userNumber === num:
+      alert('Right!');
+  }
+}
