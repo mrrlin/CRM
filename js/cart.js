@@ -2,12 +2,10 @@
 
 const cart = {
   items: [],
-  totalPrice: 0,
-  count: 0,
-
-  getTotalPrice() {
-    return this.totalPrice;
+  get totalPrice() {
+    return this.calculateItemPrice();
   },
+  count: 0,
 
   add(productName, productPrice, productCount = 1) {
     const item = {
@@ -26,9 +24,8 @@ const cart = {
   },
 
   calculateItemPrice() {
-      this.totalPrice = this.items.reduce((totalPrice, { productPrice, productCount }) => {
-      return (totalPrice += productPrice * productCount);
-  }, 0);
+      return this.items.reduce((acc, item) => 
+        (acc += item.productCount * item.productPrice), 0);
   },
 
   clear() {
@@ -39,7 +36,7 @@ const cart = {
 
   print() {
     console.log(JSON.stringify(cart.items));
-    console.log(this.getTotalPrice());
+    console.log(this.totalPrice);
     console.log(this.count);
   },
 };
