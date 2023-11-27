@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 const cart = {
   items: [],
@@ -24,8 +24,8 @@ const cart = {
   },
 
   calculateItemPrice() {
-      return this.items.reduce((acc, item) => 
-        (acc += item.productCount * item.productPrice), 0);
+    return this.items.reduce((acc, item) =>
+      (acc += item.productCount * item.productPrice), 0);
   },
 
   clear() {
