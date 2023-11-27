@@ -1,5 +1,3 @@
-// 'use strict';
-
 const cart = {
   items: [],
   get totalPrice() {
