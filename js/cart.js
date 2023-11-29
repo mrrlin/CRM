@@ -1,9 +1,21 @@
+'use strict';
+
 const cart = {
   items: [],
   get totalPrice() {
     return this.calculateItemPrice();
   },
   count: 0,
+  _discount: 0,
+  set setDiscount(promocode) {
+    if (promocode === 'METHED') {
+      this._discount += 15;
+    }
+
+    if (promocode === 'NEWYEAR') {
+      this._discount += 21;
+    }
+  },
 
   add(productName, productPrice, productCount = 1) {
     const item = {
@@ -22,8 +34,12 @@ const cart = {
   },
 
   calculateItemPrice() {
-    return this.items.reduce((acc, item) =>
-      (acc += item.productCount * item.productPrice), 0);
+    let totalPrice = this.items.reduce((acc, item) =>
+      acc += item.productCount * item.productPrice, 0);
+
+    totalPrice -= totalPrice * this._discount / 100;
+
+    return totalPrice;
   },
 
   clear() {
@@ -38,6 +54,8 @@ const cart = {
     console.log(this.count);
   },
 };
+
+cart.setDiscount = 'METHED';
 
 cart.add('Duck', 400, 5);
 cart.add('Cat', 1000, 10);
