@@ -32,9 +32,12 @@ const inputMinMaxNumber = () => {
 };
 
 const [userLowLimit, userHighLimit] = inputMinMaxNumber();
+
 const num = Math.floor((Math.random() *
   (userHighLimit - userLowLimit + 1)) + userLowLimit);
 let attempts = Math.floor((userHighLimit - userLowLimit) * 0.3);
+
+const masOfUserAttempts = [];
 
 const playGame = () => {
   if (attempts < 1) {
@@ -54,25 +57,25 @@ const playGame = () => {
     return;
   }
 
-  const masOfUserAttempts = [];
-
   switch (true) {
     case isNaN(userNumber) || userNumber === 0:
       alert('Enter number');
       break;
     case masOfUserAttempts.includes(userNumber):
-      alert(`You'he alredy enter this number. You've ${attempts}
-        ${attempts > 1 ? 'attempts' : 'attempt'}`);
+      alert(`You'he alredy enter this number.
+        You've ${attempts} ${attempts > 1 ? 'attempts' : 'attempt'}`);
       break;
     case userNumber < num:
       --attempts;
       alert(`Bigger. You have ${attempts} tries left`);
       masOfUserAttempts.push(userNumber);
+      alert(masOfUserAttempts);
       break;
     case userNumber > num:
       --attempts;
       alert(`Bigger. You have ${attempts} tries left`);
       masOfUserAttempts.push(userNumber);
+      alert(masOfUserAttempts);
       break;
     case +userNumber === num:
       alert('Right');
